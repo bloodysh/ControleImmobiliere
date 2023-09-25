@@ -16,6 +16,7 @@ public class Appartement extends BienImmobilier{
         this.ascenseur=ascenseur;
     }
 
+    
     public String typeBien() {
         int nombreDePiecesComptabilisees = 0;
 

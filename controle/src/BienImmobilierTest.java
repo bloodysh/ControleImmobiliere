@@ -6,8 +6,8 @@ public class BienImmobilierTest {
     @Test
     public void testSurfaceHabitable() {
 
-    Vendeur vendeur = new Vendeur("John", null, null, null);
-        BienImmobilier bienImmobilier = new Appartement("123 Main St", "City", "12345", vendeur, "1");
+    Vendeur vendeur = new Vendeur("anas", null, null, null);
+        BienImmobilier bienImmobilier = new Appartement("123 rue stade", "annecy", "12345", vendeur, "1");
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         TypePiece pieceNonHabitable = new TypePiece("Garage", false, true);
 
@@ -26,12 +26,11 @@ public class BienImmobilierTest {
 
     @Test
     public void testSurfaceNonhabitable() {
-        Vendeur vendeur = new Vendeur("John", null, null, null);
-        BienImmobilier bienImmobilier = new Appartement("123 Main St", "City", "12345", vendeur, "1");
+        Vendeur vendeur = new Vendeur("anas", null, null, null);
+        BienImmobilier bienImmobilier = new Appartement("123 rue rhone", "annecy", "12345", vendeur, "1");
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         TypePiece pieceNonHabitable = new TypePiece("Garage", false, true);
 
-        // Créez et ajoutez des pièces non habitables à votre bien immobilier
         Piece piece1 = new PieceParallelogramme(pieceNonHabitable, "Rez-de-chaussée", 4.0, 6.0);
         Piece piece2 = new PieceTrapezoidale(pieceNonHabitable, "Étage 1", 3.0, 5.0, 2.0);
         bienImmobilier.ajouterPiece(piece1);

@@ -5,8 +5,8 @@ import org.junit.Test;
 public class AnnonceTest {
     @Test
     public void testPrix() {
-        Vendeur vendeur = new Vendeur("John", null, null, null);
-        BienImmobilier bienImmobilier = new Appartement("123 Main St", "City", "12345", vendeur, "1");
+        Vendeur vendeur = new Vendeur("anas", null, null, null);
+        BienImmobilier bienImmobilier = new Appartement("123 rue du rhone", "annecy", "12345", vendeur, "1");
 
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         TypePiece pieceNonHabitable = new TypePiece("Garage", false, true);
@@ -18,6 +18,6 @@ public class AnnonceTest {
         Annonce annonce = new Annonce("REF123", "2023-09-25", "Bel appartement à vendre", 100.0, bienImmobilier);
 
         double expectedPrix = (piece1.surface() * 100.0) + (piece2.surface() * 100.0 * 0.25);
-        assertEquals(expectedPrix, annonce.prix(), 0.01);
+        assertEquals(expectedPrix, annonce.prix(), 0);
     }
 }

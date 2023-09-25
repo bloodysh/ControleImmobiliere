@@ -15,7 +15,7 @@ public class AppartementTest {
 
     @Test
     public void testTypeBienWithFewPieces() {
-        Vendeur vendeur = new Vendeur("John", null, null, null);
+        Vendeur vendeur = new Vendeur("hamlaoui", null, null, null);
         Appartement appartement = new Appartement("123 Main St", "City", "12345", vendeur, "1");
 
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
@@ -31,8 +31,8 @@ public class AppartementTest {
 
     @Test
     public void testTypeBienWithManyPieces() {
-        Vendeur vendeur = new Vendeur("John", null, null, null);
-        Appartement appartement = new Appartement("123 Main St", "City", "12345", vendeur, "1");
+        Vendeur vendeur = new Vendeur("anas", null, null, null);
+        Appartement appartement = new Appartement("123 rue du rhone", "annecy", "12345", vendeur, "1");
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         for (int i = 1; i <= 8; i++) {
             Piece piece = new PieceParallelogramme(pieceHabitable, "Étage " + i, 4.0, 6.0);
