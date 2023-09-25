@@ -6,7 +6,7 @@ public class BienImmobilierTest {
     @Test
     public void testSurfaceHabitable() {
 
-    Vendeur vendeur = new Vendeur("John Doe", null, null, null);
+    Vendeur vendeur = new Vendeur("John", null, null, null);
         BienImmobilier bienImmobilier = new Appartement("123 Main St", "City", "12345", vendeur, "1");
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         TypePiece pieceNonHabitable = new TypePiece("Garage", false, true);
@@ -26,7 +26,7 @@ public class BienImmobilierTest {
 
     @Test
     public void testSurfaceNonhabitable() {
-        Vendeur vendeur = new Vendeur("John Doe", null, null, null);
+        Vendeur vendeur = new Vendeur("John", null, null, null);
         BienImmobilier bienImmobilier = new Appartement("123 Main St", "City", "12345", vendeur, "1");
         TypePiece pieceHabitable = new TypePiece("Chambre", true, true);
         TypePiece pieceNonHabitable = new TypePiece("Garage", false, true);
@@ -40,7 +40,6 @@ public class BienImmobilierTest {
         
         double expectedSurface = (4.0 * 6.0) + (0.5 * 2.0) * (3.0 + 5.0);
 
-        // Utilisez assertEquals pour vérifier si la méthode surfaceNonHabitable() renvoie la bonne valeur
         assertEquals(expectedSurface, bienImmobilier.surfaceNonhabitable(), 0);
     }
 }
